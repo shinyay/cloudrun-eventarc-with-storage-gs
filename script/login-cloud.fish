@@ -21,9 +21,13 @@ function do_func
   or set -l _flag_project ""
 
   gcloud components update --quiet
+  gcloud components install beta
   gcloud auth login $_flag_user
   gcloud config set project $_flag_project
-  gcloud config get-value project
+  gcloud config set run/region us-central1
+  gcloud config set run/platform managed
+  gcloud config set eventarc/location us-central1
+  gcloud config list
 end
 
 do_func $argv
