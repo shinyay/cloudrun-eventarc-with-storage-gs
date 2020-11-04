@@ -26,6 +26,17 @@ $ gcloud run deploy storage-event-controller \
       --allow-unauthenticated
 ```
 
+### Create Eventarc Trigger
+```
+$ gcloud beta eventarc triggers create events-quickstart-trigger \
+      --destination-run-service=storage-event-controller \
+      --destination-run-region=us-central1 \
+      --matching-criteria="type=google.cloud.audit.log.v1.written" \
+      --matching-criteria="serviceName=storage.googleapis.com" \
+      --matching-criteria="methodName=storage.objects.create" \
+      --service-account="(gcloud projects list --filter=(gcloud config get-value project) --format='value(PROJECT_NUMBER)')"-compute@developer.gserviceaccount.com
+```
+
 ## Features
 
 - feature:1
