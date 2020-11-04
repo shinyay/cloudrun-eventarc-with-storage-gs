@@ -19,6 +19,12 @@ This shows how to receive events from Cloud Storage in a Cloud Run using Eventar
 |ce-subject|Metadata about the GCS bucket location.|
 
 ## Demo
+### Deploy to Cloud Run
+```
+$ gcloud run deploy storage-event-controller \
+      --image gcr.io/(gcloud config get-value project)/storage-event-controller \
+      --allow-unauthenticated
+```
 
 ## Features
 
