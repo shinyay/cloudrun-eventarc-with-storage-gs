@@ -9,6 +9,15 @@ This shows how to receive events from Cloud Storage in a Cloud Run using Eventar
 - [Go to the Cloud Audit Logs console](https://console.cloud.google.com/iam-admin/audit?_ga=2.112109824.522431159.1604272505-983599867.1599137884)
   - Enable Cloud Audit Logs `Admin Read`, `Data Read`, and `Data Write` Log Types in Cloud Storage
 
+### Event HTTP headers
+|HTTP Header|Description|
+|-----------|-----------|
+|ce-id|Unique ID of this message, assigned by the server when the event is generated.|
+|ce-source|A string containing your project.|
+|ce-specversion|The specification version used for this event.|
+|ce-type|The CloudEvent type constant.|
+|ce-subject|Metadata about the GCS bucket location.|
+
 ## Demo
 
 ## Features
