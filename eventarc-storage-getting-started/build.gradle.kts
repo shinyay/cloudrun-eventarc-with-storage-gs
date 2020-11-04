@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+	id("com.google.cloud.tools.jib") version "2.6.0"
 	id("org.springframework.boot") version "2.3.5.RELEASE"
 	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	kotlin("jvm") version "1.3.72"
@@ -33,5 +34,18 @@ tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "11"
+	}
+}
+
+jib {
+//	from {
+//		image = "shinyay/adoptopenjdk11-minimum"
+//	}
+	to {
+		image = "gcr.io/<GCP_PROJECT_ID>/storage-event-controller"
+		tags = setOf("1.0.0")
+	}
+	container {
+		jvmFlags = mutableListOf("-Xms512m", "-Xdebug")
 	}
 }
