@@ -1,6 +1,6 @@
-# Name
+# Cloud Run with Eventarc for Events of Cloud Storage
 
-Overview
+This shows how to receive events from Cloud Storage in a Cloud Run using Eventarc.
 
 ## Description
 
