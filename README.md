@@ -37,6 +37,10 @@ $ gcloud beta eventarc triggers create events-quickstart-trigger \
       --service-account="(gcloud projects list --filter=(gcloud config get-value project) --format='value(PROJECT_NUMBER)')"-compute@developer.gserviceaccount.com
 ```
 
+```
+$ gcloud beta eventarc triggers list --location=us-central1
+```
+
 ## Features
 
 - feature:1
