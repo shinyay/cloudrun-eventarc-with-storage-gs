@@ -28,6 +28,12 @@ function do_func
   gcloud config set run/platform managed
   gcloud config set eventarc/location us-central1
   gcloud config list
+
+  gcloud services enable run.googleapis.com
+  gcloud services enable logging.googleapis.com
+  gcloud services enable cloudbuild.googleapis.com
+  gcloud services enable pubsub.googleapis.com
+  gcloud services enable eventarc.googleapis.com
 end
 
 do_func $argv
