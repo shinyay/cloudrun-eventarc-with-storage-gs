@@ -42,7 +42,7 @@ jib {
 //		image = "shinyay/adoptopenjdk11-minimum"
 //	}
 	to {
-		image = "gcr.io/<GCP_PROJECT_ID>/storage-event-controller"
+		image = "gcr.io/<GCP_PROJECT_ID>/storage-event-receiver"
 		tags = setOf("1.0.0")
 	}
 	container {
