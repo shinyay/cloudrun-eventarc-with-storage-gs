@@ -1,5 +1,5 @@
 spring:
   application:
-    name: storage-event-controller
+    name: storage-event-receiver
 server:
   port: ${PORT:8080}
