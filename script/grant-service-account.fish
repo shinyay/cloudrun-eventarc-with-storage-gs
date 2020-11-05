@@ -15,4 +15,3 @@ function do_func
 end
 
 do_func $argv
-./
