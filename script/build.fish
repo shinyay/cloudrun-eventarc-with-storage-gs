@@ -9,7 +9,7 @@ function do_func
   or return 1
 
   if set -lq _flag_help
-    echo "build.fish -p/--project <PROJECT_ID>"
+    echo "cloud-build.fish -p/--project <PROJECT_ID>"
     return
   end
 
