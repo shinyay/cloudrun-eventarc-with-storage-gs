@@ -7,4 +7,3 @@ gsutil ls
 end
 
 do_func $argv
-./
