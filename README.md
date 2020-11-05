@@ -157,6 +157,31 @@ workflowexecutions.googleapis.com           Workflow Executions
 workflows.googleapis.com                    Workflows
 ```
 
+#### Method Name List
+```
+$ gcloud beta eventarc attributes method-names list --type google.cloud.audit.log.v1.written --service-name storage.googleapis.com
+
+METHOD_NAME
+storage.buckets.create
+storage.buckets.delete
+storage.buckets.get
+storage.buckets.list
+storage.buckets.update
+storage.getIamPermissions
+storage.hmacKeys.create
+storage.hmacKeys.delete
+storage.hmacKeys.get
+storage.hmacKeys.list
+storage.hmacKeys.update
+storage.objects.create
+storage.objects.delete
+storage.objects.get
+storage.objects.list
+storage.objects.update
+storage.projects.getOrCreateServiceAccount
+storage.setIamPermissions
+```
+
 ## Requirement
 
 ## Usage
