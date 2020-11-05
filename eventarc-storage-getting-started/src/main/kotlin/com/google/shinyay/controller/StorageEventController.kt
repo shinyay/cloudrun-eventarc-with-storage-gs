@@ -24,6 +24,7 @@ class StorageEventController {
             }
         }
         val message = "Detected change in GCS bucket: ${header["ce-subject"]}"
+        logger.info(message)
         return ResponseEntity<String>(message, HttpStatus.OK)
     }
 }
