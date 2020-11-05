@@ -43,8 +43,15 @@ $ gcloud beta eventarc triggers list --location=us-central1
 
 ## Features
 
-- feature:1
-- feature:2
+### Eventarc Trigger
+#### Type List
+```
+$ gcloud beta eventarc attributes types list
+
+NAME                                           DESCRIPTION
+google.cloud.audit.log.v1.written              Cloud Audit Log written
+google.cloud.pubsub.topic.v1.messagePublished  Cloud Pub/Sub message published
+```
 
 ## Requirement
 
